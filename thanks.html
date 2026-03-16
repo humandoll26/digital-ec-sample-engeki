@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ご予約ありがとうございます | 夜風のあとで</title>
+    <meta
+      name="description"
+      content="小劇場公演『夜風のあとで』の予約完了ページです。来場前に確認したい案内をまとめています。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ご予約ありがとうございます | 夜風のあとで" />
+    <meta
+      property="og:description"
+      content="小劇場公演『夜風のあとで』の予約完了ページです。受付方法や会場案内など、来場前の確認事項をまとめています。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <!-- TODO: 公演名と予約完了後の案内文を自分たちの運用に合わせて差し替える -->
+          <p class="eyebrow">Thank You</p>
+          <p class="hero-date">Reservation Completed</p>
+          <h1>ご予約ありがとうございます</h1>
+          <p class="hero-lead">
+            小劇場公演「夜風のあとで」のご予約を受け付けました。
+            当日は受付で購入時のお名前をお伝えください。来場前に確認しておきたい内容をこのページにまとめています。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html">公演ページに戻る</a>
+            <a class="button button-secondary" href="#arrival">当日の流れを見る</a>
+          </div>
+          <ul class="hero-points">
+            <li>受付開始は開演45分前です</li>
+            <li>受付で購入時のお名前を確認します</li>
+            <li>購入完了メールもすぐ見られるようにしておくと安心です</li>
+          </ul>
+        </div>
+
+        <aside class="ticket-panel" aria-label="予約内容の案内">
+          <div class="ticket-panel-head">
+            <span class="badge">Reservation Complete</span>
+            <p class="ticket-status">ご来場をお待ちしています</p>
+          </div>
+          <!-- TODO: 会場名・入場方法・保存してほしい案内を実際の運用に合わせて差し替える -->
+          <dl class="ticket-meta">
+            <div>
+              <dt>公演名</dt>
+              <dd>夜風のあとで</dd>
+            </div>
+            <div>
+              <dt>会場</dt>
+              <dd>黒箱シアター 2F</dd>
+            </div>
+            <div>
+              <dt>入場方法</dt>
+              <dd>受付でお名前を確認</dd>
+            </div>
+            <div>
+              <dt>ご案内</dt>
+              <dd>購入完了メールも念のため保存してください</dd>
+            </div>
+          </dl>
+          <div class="ticket-card">
+            <p class="mini-label">確認ポイント</p>
+            <h2>来場前に見てほしいこと</h2>
+            <ul class="info-list">
+              <li>予約した日時</li>
+              <li>会場までの行き方</li>
+              <li>受付開始時間</li>
+              <li>入場時に必要な案内</li>
+            </ul>
+          </div>
+        </aside>
+      </header>
+
+      <main>
+        <section class="section guide-section" id="arrival">
+          <div class="guide-layout">
+            <article class="guide-card flow-card">
+              <!-- TODO: 当日の流れは実際の受付運用に合わせて調整する -->
+              <p class="section-label">Arrival Flow</p>
+              <h2>当日の流れ</h2>
+              <ol class="flow-list">
+                <li>開演45分前から受付を開始します。</li>
+                <li>受付で購入時のお名前をスタッフへお伝えください。</li>
+                <li>確認後、そのままご入場いただけます。</li>
+                <li>開演直前は混み合うため、少し早めの到着がおすすめです。</li>
+              </ol>
+            </article>
+
+            <article class="guide-card access-card">
+              <!-- TODO: 会場住所とアクセス情報を実際の内容に差し替える -->
+              <p class="section-label">Access</p>
+              <h2>会場案内</h2>
+              <p class="guide-text">
+                黒箱シアター 2F<br />
+                東京都〇〇区〇〇 1-2-3 アトリエビル 2F<br />
+                〇〇駅 東口から徒歩6分
+              </p>
+              <div class="route-box">
+                <span class="route-stop">駅</span>
+                <span class="route-line"></span>
+                <span class="route-stop">大通り</span>
+                <span class="route-line"></span>
+                <span class="route-stop">劇場</span>
+              </div>
+              <p class="helper">
+                ビル入口が少し見つけづらいため、1F看板を目印にお越しください。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section purchase-section">
+          <div class="purchase-card">
+            <div class="section-heading compact">
+              <p class="section-label">Before You Come</p>
+              <h2>来場前のご案内</h2>
+              <p>
+                予約後に不安が残らないよう、最低限の案内をまとめています。
+                ご来場前に一度ご確認ください。
+              </p>
+            </div>
+
+            <div class="purchase-layout">
+              <div>
+                <div class="simple-note" aria-label="受付案内">
+                  <strong>受付について</strong>
+                  <p>
+                    受付では、購入時のお名前を確認します。あわせて購入完了メールもすぐ出せる状態にしておくと、確認がよりスムーズです。
+                  </p>
+                </div>
+                <div class="simple-note" aria-label="遅刻時の案内">
+                  <strong>遅刻しそうな場合</strong>
+                  <p>
+                    開演時刻を過ぎると、演出の都合で入場タイミングをお待ちいただく場合があります。余裕をもってご来場ください。
+                  </p>
+                </div>
+              </div>
+
+              <div class="purchase-side">
+                <div class="notice-box">
+                  予約内容に変更がある場合は、主催者からの案内をご確認ください。
+                </div>
+                <div class="notice-box">
+                  当日は開演直前を避け、少し余裕をもってご来場いただくと安心です。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
