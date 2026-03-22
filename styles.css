@@ -563,6 +563,50 @@ dd {
   margin-bottom: 10px;
 }
 
+.customize-card {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.customize-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.customize-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.customize-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(159, 61, 38, 0.12);
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.customize-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 @media (max-width: 980px) {
   .hero,
   .schedule-grid,
@@ -589,6 +633,7 @@ dd {
   .story-card,
   .guide-card,
   .purchase-card,
+  .customize-card,
   .faq-list article,
   .schedule-card,
   .price-card {
