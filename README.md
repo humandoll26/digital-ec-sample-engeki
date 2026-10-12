@@ -5,6 +5,21 @@
 
 制作・配布: 未完製作所
 
+## 公開デモの制限
+
+現在の公開サンプルは架空公演のデモです。予約・決済はできません。
+`demoMode: true`、両方の決済URLが空の状態では、外部決済へのリンクとCheckout
+ボタンを無効にし、Checkout APIへ通信しません。JavaScriptが動かない場合も無効です。
+`thanks.html`を直接開いても予約完了にはなりません。購入完了メールは送信しません。
+実際の決済やStripe側の設定変更は、この修正では実施していません。
+
+実際に使用する場合は、公演情報とメタ情報を実データに編集し、所有者が取得した
+有効なHTTPSのStripe Payment Linkを設定したうえで`demoMode: false`にします。
+未設定・placeholder・example等の仮URLや、Stripe以外のPayment Linkは無効です。
+Stripeのテストリンクも指定可能ですが、本番公開前に所有者がモードを確認してください。
+有効な設定があると予約ボタンが有効になり、デモ表示が消えます。設定が無効なら
+`demoMode: false`でもデモ表示になります。架空公演のまま販売を有効化しないでください。
+
 これは次のような人向けです。
 
 - 予約システムの手数料や設定負荷をできるだけ抑えたい
@@ -83,6 +98,7 @@
 
 ```js
 const stripeConfig = {
+  demoMode: false, // 実際の公演・決済設定が整ってから変更
   paymentLinkUrl: "https://buy.stripe.com/...",
   createCheckoutSessionUrl: "",
 };
@@ -180,6 +196,8 @@ GitHub Pages のような静的ホスティングでも、次までは実現で�
 ## Checkout API を使う場合
 
 `createCheckoutSessionUrl` を設定すると、ボタン押下時にその API へ `POST` します。  
+`demoMode: false`かつ有効なHTTPS URLの場合のみAPIボタンが表示されます。
+起動時のAPI通信はありません。返却URLもHTTPSの`checkout.stripe.com/c/pay/`に限定します。
 レスポンスは次の形式を返す前提です。
 
 ```json

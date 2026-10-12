@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>小劇場公演「夜風のあとで」チケット予約</title>
+    <title>架空公演デモ「夜風のあとで」| 小劇場チケット販売テンプレート</title>
     <meta
       name="description"
-      content="小劇場公演『夜風のあとで』のチケット予約ページです。日程、料金、会場、入場方法をわかりやすく案内しています。"
+      content="架空公演のデモです。予約・決済はできません。小劇場チケット販売ページの構成例です。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="小劇場公演『夜風のあとで』チケット予約" />
+    <meta property="og:title" content="架空公演デモ『夜風のあとで』" />
     <meta
       property="og:description"
-      content="小劇場向けのシンプルなチケット予約ページテンプレートです。日時、料金、会場、入場方法をわかりやすく案内します。"
+      content="架空公演のデモです。予約・決済はできません。小劇場チケット販売ページの構成例です。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +24,7 @@
   </head>
   <body>
     <div class="page-shell">
+      <p class="notice-box demo-notice" data-demo-only role="status"><strong>架空公演のデモです。予約・決済はできません。</strong></p>
       <header class="hero">
         <div class="hero-copy">
           <!-- TODO: 公演名・日程・導入文を自分の公演情報に差し替える -->
@@ -35,7 +36,7 @@
             はじめて小劇場を観に来る方にもわかりやすいよう、日時、料金、会場、入場方法をこのページにまとめています。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#purchase">チケットを予約する</a>
+            <a class="button button-primary" href="#purchase" data-booking-label>デモの予約欄を見る</a>
             <a class="button button-secondary" href="#schedule">日程と料金を見る</a>
           </div>
           <ul class="hero-points">
@@ -50,8 +51,8 @@
 
         <aside class="ticket-panel" aria-label="公演概要">
           <div class="ticket-panel-head">
-            <span class="badge">Now Booking</span>
-            <p class="ticket-status">前売受付中</p>
+            <span class="badge" data-demo-only>DEMO</span><span class="badge" data-live-only hidden>Ticket Information</span>
+            <p class="ticket-status" data-demo-only>予約・決済はできません</p><p class="ticket-status" data-live-only hidden>予約方法をご確認ください</p>
           </div>
           <!-- TODO: 会場・座席・料金・入場方法を実際の案内に差し替える -->
           <dl class="ticket-meta">
@@ -79,7 +80,7 @@
               <li>いつ上演されるか</li>
               <li>いくらで観られるか</li>
               <li>どこへ行けばよいか</li>
-              <li>購入後に何をすればよいか</li>
+              <li>販売ページの案内構成例</li>
             </ul>
             <p class="operator-note">
               このテンプレートは、小劇場向けに「高機能よりも低コストで回せること」を優先した設計です。
@@ -206,7 +207,8 @@
             <article class="guide-card flow-card">
               <!-- TODO: 受付方法や当日の流れを自分たちの運用に合わせて調整する -->
               <p class="section-label">Flow</p>
-              <h2>購入から入場までの流れ</h2>
+              <h2>購入から入場までの流れ（設定後の運用例）</h2>
+              <p data-demo-only>このデモでは以下の予約・決済・入場は行えません。</p>
               <ol class="flow-list">
                 <li>このページの予約ボタンから Stripe の決済画面へ進みます。</li>
                 <li>決済が完了すると、サンクスページへ移動します。</li>
@@ -222,7 +224,8 @@
             <div class="section-heading compact">
               <p class="section-label">Purchase</p>
               <h2>チケット予約</h2>
-              <p>
+              <p class="notice-box demo-notice" data-demo-only><strong>架空公演のデモです。予約・決済はできません。</strong></p>
+              <p data-live-only hidden>
                 日時と料金をご確認のうえ、下のボタンからご予約ください。
                 決済完了後は、そのままご来場前の案内ページへ進みます。
               </p>
@@ -235,29 +238,32 @@
                   <a
                     id="payment-link-button"
                     class="button button-primary"
-                    href="https://buy.stripe.com/test_placeholder"
+                    aria-disabled="true"
+                    tabindex="-1"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    チケットを予約する
+                    デモのため予約できません
                   </a>
+                  <button id="checkout-button" class="button button-primary" type="button" disabled hidden>Stripeの決済画面へ進む</button>
                 </div>
+                <p id="checkout-status" role="status" aria-live="polite"></p>
                 <p class="helper">
-                  学生料金や複数日程を案内したい場合は、予約前に日時と券種をもう一度ご確認ください。
+                  料金・日程・会場はテンプレートの記載例です。実際の販売には主催者による設定が必要です。
                 </p>
                 <div class="notice-box">
-                  ご予約後はサンクスページへ移動します。当日は受付で購入時のお名前をお伝えください。
+                  このデモでは予約は作成されず、購入完了メールも送信されません。
                 </div>
               </div>
 
               <div class="purchase-side">
-                <div class="simple-note" aria-label="予約前の確認">
+                <div class="simple-note" aria-label="予約前の確認" data-live-only hidden>
                   <strong>予約前の確認</strong>
                   <p>
                     予約するステージ、料金、会場を確認してからお進みください。開演直前は混み合うため、少し早めの来場がおすすめです。
                   </p>
                 </div>
-                <div class="simple-note" aria-label="入場のご案内">
+                <div class="simple-note" aria-label="入場のご案内" data-live-only hidden>
                   <strong>入場のご案内</strong>
                   <p>
                     受付では購入時のお名前を確認します。購入完了メールをすぐ見られるようにしておくと、よりスムーズです。
@@ -271,7 +277,7 @@
         <section class="section faq-section">
           <div class="section-heading compact">
             <p class="section-label">FAQ</p>
-            <h2>よくある質問</h2>
+            <h2>よくある質問（運用例）</h2>
           </div>
           <!-- TODO: FAQ は実際の公演で聞かれそうな内容に差し替える -->
           <div class="faq-list">
