@@ -662,3 +662,6 @@ dd {
     min-width: 24px;
   }
 }
+:root .button[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+:root [hidden] { display: none !important; }
+.demo-notice { border: 2px solid currentColor; font-size: 1.1rem; }

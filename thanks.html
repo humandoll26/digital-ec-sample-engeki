@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ご予約ありがとうございます | 夜風のあとで</title>
+    <title>来場案内のサンプル | 夜風のあとで</title>
     <meta
       name="description"
-      content="小劇場公演『夜風のあとで』の予約完了ページです。来場前に確認したい案内をまとめています。"
+      content="架空公演のデモです。予約・決済はできません。このページの表示は購入完了の証明にはなりません。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ご予約ありがとうございます | 夜風のあとで" />
+    <meta property="og:title" content="来場案内のサンプル | 夜風のあとで" />
     <meta
       property="og:description"
-      content="小劇場公演『夜風のあとで』の予約完了ページです。受付方法や会場案内など、来場前の確認事項をまとめています。"
+      content="架空公演のデモです。予約・決済はできません。このページの表示は購入完了の証明にはなりません。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,31 +24,33 @@
   </head>
   <body>
     <div class="page-shell">
+      <p class="notice-box demo-notice" data-demo-only role="status"><strong>架空公演のデモです。予約・決済はできません。</strong>予約は作成されておらず、購入完了メールも送信されません。</p>
+      <p class="notice-box">このページの表示だけでは予約・決済の完了を確認できません。実際の購入状況はStripeの領収書や主催者の案内で確認してください。</p>
       <header class="hero">
         <div class="hero-copy">
           <!-- TODO: 公演名と予約完了後の案内文を自分たちの運用に合わせて差し替える -->
-          <p class="eyebrow">Thank You</p>
-          <p class="hero-date">Reservation Completed</p>
-          <h1>ご予約ありがとうございます</h1>
+          <p class="eyebrow">Visitor Information</p>
+          <p class="hero-date" data-demo-only>DEMO</p>
+          <h1>来場案内のサンプル</h1>
           <p class="hero-lead">
-            小劇場公演「夜風のあとで」のご予約を受け付けました。
-            当日は受付で購入時のお名前をお伝えください。来場前に確認しておきたい内容をこのページにまとめています。
+            小劇場公演「夜風のあとで」を例にした案内ページです。
+            以下の会場・受付案内は記載例です。実際の運用に合わせて主催者が編集してください。
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="./index.html">公演ページに戻る</a>
             <a class="button button-secondary" href="#arrival">当日の流れを見る</a>
           </div>
           <ul class="hero-points">
-            <li>受付開始は開演45分前です</li>
-            <li>受付で購入時のお名前を確認します</li>
-            <li>購入完了メールもすぐ見られるようにしておくと安心です</li>
+            <li>受付開始時間の記載例</li>
+            <li>受付方法の記載例</li>
+            <li>このページは購入完了の証明ではありません</li>
           </ul>
         </div>
 
         <aside class="ticket-panel" aria-label="予約内容の案内">
           <div class="ticket-panel-head">
-            <span class="badge">Reservation Complete</span>
-            <p class="ticket-status">ご来場をお待ちしています</p>
+            <span class="badge">Information Sample</span>
+            <p class="ticket-status">主催者向けの記載例</p>
           </div>
           <!-- TODO: 会場名・入場方法・保存してほしい案内を実際の運用に合わせて差し替える -->
           <dl class="ticket-meta">
@@ -66,7 +68,7 @@
             </div>
             <div>
               <dt>ご案内</dt>
-              <dd>購入完了メールも念のため保存してください</dd>
+              <dd>このページから購入完了メールは送信されません</dd>
             </div>
           </dl>
           <div class="ticket-card">
@@ -88,7 +90,7 @@
             <article class="guide-card flow-card">
               <!-- TODO: 当日の流れは実際の受付運用に合わせて調整する -->
               <p class="section-label">Arrival Flow</p>
-              <h2>当日の流れ</h2>
+              <h2>当日の流れ（記載例）</h2>
               <ol class="flow-list">
                 <li>開演45分前から受付を開始します。</li>
                 <li>受付で購入時のお名前をスタッフへお伝えください。</li>
@@ -100,7 +102,7 @@
             <article class="guide-card access-card">
               <!-- TODO: 会場住所とアクセス情報を実際の内容に差し替える -->
               <p class="section-label">Access</p>
-              <h2>会場案内</h2>
+              <h2>会場案内（架空の会場）</h2>
               <p class="guide-text">
                 黒箱シアター 2F<br />
                 東京都〇〇区〇〇 1-2-3 アトリエビル 2F<br />
@@ -124,10 +126,9 @@
           <div class="purchase-card">
             <div class="section-heading compact">
               <p class="section-label">Before You Come</p>
-              <h2>来場前のご案内</h2>
+              <h2>来場前のご案内（記載例）</h2>
               <p>
-                予約後に不安が残らないよう、最低限の案内をまとめています。
-                ご来場前に一度ご確認ください。
+                主催者が実際の運用に合わせて編集する案内の例です。
               </p>
             </div>
 
@@ -149,7 +150,7 @@
 
               <div class="purchase-side">
                 <div class="notice-box">
-                  予約内容に変更がある場合は、主催者からの案内をご確認ください。
+                  実際の予約内容は主催者へ確認してください。このデモは予約を受け付けません。
                 </div>
                 <div class="notice-box">
                   当日は開演直前を避け、少し余裕をもってご来場いただくと安心です。
@@ -160,5 +161,6 @@
         </section>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
